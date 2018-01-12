@@ -1,19 +1,19 @@
-// Copyright (c) 2012-2017, The CryptoNote developers, The Bytecoin developers
+// Copyright (c) 2012-2017, The CryptoNote developers, The MasterCoin developers
 //
-// This file is part of Bytecoin.
+// This file is part of MasterCoin.
 //
-// Bytecoin is free software: you can redistribute it and/or modify
+// MasterCoin is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Lesser General Public License as published by
 // the Free Software Foundation, either version 3 of the License, or
 // (at your option) any later version.
 //
-// Bytecoin is distributed in the hope that it will be useful,
+// MasterCoin is distributed in the hope that it will be useful,
 // but WITHOUT ANY WARRANTY; without even the implied warranty of
 // MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 // GNU Lesser General Public License for more details.
 //
 // You should have received a copy of the GNU Lesser General Public License
-// along with Bytecoin.  If not, see <http://www.gnu.org/licenses/>.
+// along with MasterCoin.  If not, see <http://www.gnu.org/licenses/>.
 
 #include "TestNetwork.h"
 
@@ -24,9 +24,9 @@
 #include "RPCTestNode.h"
 
 #ifdef _WIN32
-const std::string bytecoinDaemon = "bytecoind.exe";
+const std::string MasterCoinDaemon = "MasterCoind.exe";
 #else
-const std::string bytecoinDaemon = "bytecoind";
+const std::string MasterCoinDaemon = "MasterCoind";
 #endif
 
 namespace {
@@ -135,9 +135,9 @@ TestNodeConfiguration TestNetworkBuilder::buildNodeConfiguration(size_t index) {
     cfg.blockchainLocation = blockchainLocation;
   }
 
-  cfg.daemonPath = bytecoinDaemon; // default
+  cfg.daemonPath = MasterCoinDaemon; // default
   cfg.testnet = testnet;
-  cfg.logFile = "test_bytecoind" + std::to_string(index) + ".log";
+  cfg.logFile = "test_MasterCoind" + std::to_string(index) + ".log";
 
   uint16_t rpcPort = static_cast<uint16_t>(rpcBasePort + index);
   uint16_t p2pPort = static_cast<uint16_t>(p2pBasePort + index);
